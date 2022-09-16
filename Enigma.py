@@ -1,6 +1,3 @@
-import time as time
-
-
 # USUALLY 10 OUT OF 13 WIRES ON PLUGBOARD WERE USUALLY WIRED UP!!!!!!
 
 '''
@@ -141,11 +138,11 @@ while True:
 		right_rotor_start =  input("Which letter would you like the right rotor to start on? (A-Z) ").upper()
 		middle_rotor_start = input("Which letter would you like the middle rotor to start on? (A-Z) ").upper()
 		left_rotor_start = input("Which letter would you like the left rotor to start on? (A-Z) ").upper()
-		print(right_rotor_start)
-		print(middle_rotor_start)
-		print(left_rotor_start)
+
 		if (ord(right_rotor_start) in r) and (ord(middle_rotor_start) in r) and (ord(left_rotor_start) in r):
 			break
+		else:
+			print("Please enter (A-Z) for each rotor start")
 	
 	except:
 		print("Please be sure to enter a character (A-Z) for each rotor\n")
@@ -170,8 +167,7 @@ while (phrase != 'q'):
 
 	print(encrypt(phrase.upper(), slotOne, slotTwo, slotThree))
 	print()
-	
-	time.sleep(3)
+
 	
 print("Thanks for playing!")
 	
